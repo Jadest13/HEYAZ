@@ -1,0 +1,40 @@
+{
+  "name": "@heyaz/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "typecheck": "tsc -p tsconfig.check.json",
+    "lint": "eslint src drizzle.config.ts",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file-if-exists=.env src/db/migrate.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@heyaz/contracts": "*",
+    "@hono/node-server": "^2.1.1",
+    "@hono/zod-openapi": "^1.6.3",
+    "@js-temporal/polyfill": "^0.5.1",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.13.7",
+    "jose": "^6.0.0",
+    "pg": "^8.0.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.0.0",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.0.0",
+    "typescript": "~5.9.2",
+    "vitest": "^3.2.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@heyaz/app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*"
+  },
+  "dependencies": {
+    "zod": "^3.24.0",
+    "@emotion/native": "^11.11.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "react-native-web": "^0.21.0",
+    "react-router-dom": "^7.0.0",
+    "lucide-react": "^0.468.0"
+  },
+  "peerDependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "HEYAZ",
+    "slug": "heyaz",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": { "bundleIdentifier": "com.heyaz.fitness" },
+    "android": { "package": "com.heyaz.fitness" }
+  }
+}

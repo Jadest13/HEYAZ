@@ -1,0 +1,42 @@
+export const exercises = [
+  { id: 'bench', name: '벤치프레스', muscle: '가슴', equipment: '바벨', kind: 'strength', met: 5 },
+  {
+    id: 'incline',
+    name: '인클라인 덤벨 프레스',
+    muscle: '가슴',
+    equipment: '덤벨',
+    kind: 'strength',
+    met: 5,
+  },
+  {
+    id: 'shoulder',
+    name: '덤벨 숄더 프레스',
+    muscle: '어깨',
+    equipment: '덤벨',
+    kind: 'strength',
+    met: 5,
+  },
+  {
+    id: 'lateral',
+    name: '사이드 레터럴 레이즈',
+    muscle: '어깨',
+    equipment: '덤벨',
+    kind: 'strength',
+    met: 4,
+  },
+  {
+    id: 'pushdown',
+    name: '케이블 푸시다운',
+    muscle: '삼두',
+    equipment: '케이블',
+    kind: 'strength',
+    met: 4,
+  },
+  { id: 'squat', name: '스쿼트', muscle: '하체', equipment: '맨몸', kind: 'strength', met: 5 },
+  { id: 'row', name: '덤벨 로우', muscle: '등', equipment: '덤벨', kind: 'strength', met: 5 },
+  { id: 'lunge', name: '런지', muscle: '하체', equipment: '맨몸', kind: 'strength', met: 5 },
+  { id: 'pushup', name: '푸시업', muscle: '가슴', equipment: '맨몸', kind: 'strength', met: 5 },
+  { id: 'plank', name: '플랭크', muscle: '코어', equipment: '맨몸', kind: 'timed', met: 3 },
+  { id: 'jump', name: '팔 벌려 뛰기', muscle: '전신', equipment: '맨몸', kind: 'timed', met: 7 },
+] as const;
+export const exerciseIds = exercises.map((exercise) => exercise.id);

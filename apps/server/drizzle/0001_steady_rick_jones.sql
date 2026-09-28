@@ -1,0 +1,1 @@
+ALTER TABLE "idempotency_requests" ADD COLUMN "invalidated" boolean DEFAULT false NOT NULL;

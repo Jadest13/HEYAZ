@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.expo/
+.env
+*.log
+coverage/
+.data/
+.env.*
+!.env.example
+docs/

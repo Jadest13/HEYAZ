@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": { "lib": ["ES2022", "DOM"], "types": ["react"] },
+  "include": [
+    "src/**/*.tsx",
+    "../../packages/app/src/types/**/*.ts",
+    "../../packages/app/src/hooks/**/*.tsx",
+    "../../packages/app/src/domain/**/*.ts"
+  ],
+  "exclude": ["**/*.web.tsx"]
+}

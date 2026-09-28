@@ -1,0 +1,36 @@
+{
+  "name": "heyaz",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @heyaz/web",
+    "build": "npm run build -w @heyaz/web",
+    "typecheck": "tsc --noEmit && npm run typecheck -w @heyaz/native && npm run typecheck -w @heyaz/contracts && npm run typecheck -w @heyaz/server",
+    "lint": "eslint .",
+    "test": "npm run build -w @heyaz/contracts && vitest run",
+    "format": "prettier --write .",
+    "android": "npm run android -w @heyaz/native",
+    "dev:server": "npm run build -w @heyaz/contracts && npm run dev -w @heyaz/server",
+    "build:server": "npm run build -w @heyaz/contracts && npm run build -w @heyaz/server",
+    "start:server": "npm run start -w @heyaz/server",
+    "test:server": "npm run build -w @heyaz/contracts && npm run test -w @heyaz/server",
+    "db:generate": "npm run db:generate -w @heyaz/server",
+    "db:migrate": "npm run db:migrate -w @heyaz/server",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.2.0"
+  }
+}
